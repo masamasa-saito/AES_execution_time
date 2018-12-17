@@ -82,7 +82,7 @@ int main ( void ){
     c2 = clock();
     //t2 = clock();
     //t2 = time(NULL);
-    printf("全ての解を求めるまでにかかった時間：%f[ms]\n",(double)(c2-c1)/CLOCKS_PER_SEC);
+    printf("全ての解を求めるまでにかかった時間：%.14f[ms]\n",(double)(c2-c1)/CLOCKS_PER_SEC);
 
     return 0;
 }
