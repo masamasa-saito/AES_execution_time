@@ -18,7 +18,7 @@ int main ( void ){
         printf("Hello world!\n");
     }
     c2 = clock();
-    printf("全ての解を求めるまでにかかった時間：%.14f[ms]\n",(double)(c2-c1)/CLOCKS_PER_SEC);
+    printf("全ての解を求めるまでにかかった時間：%.14f[ms]\n",((double)(c2-c1)/CLOCKS_PER_SEC)*1000);
 
     return 0;
 }

@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
-#include <sys/time.h>
+//#include <sys/time.h>
 
 /*=== f関数：引数xに対しf(x)を返す ===*/
 double f ( double x ){
@@ -42,8 +42,8 @@ double newton_method ( double initial_value ){
 
 
 #define N 256
-#define MAX 100
-int main ( void ){
+#define MAX 600
+int main(void){
     /// 外部の入力ファイルから1行ずつ読み込んで、入力用の配列に入れる ///
     FILE *fp;
     char *filename = "../input/input.txt";
@@ -57,7 +57,7 @@ int main ( void ){
     }
 
     /* ファイルの終端まで文字を読み取り入力用の配列に入れる */
-    while ( fgets(readline, N, fp) != NULL ) {
+    while ( fgets(readline, N, fp) != NULL ){
         input_arr[i] = atof(readline);
         i++;
     }
@@ -67,23 +67,19 @@ int main ( void ){
     
     int input_arr_len = i;
     double answer;
-    //time_t t1,t2; 
-    //int t1,t2;
     /// ここから時間測定開始 ///
-    //t1 = clock();
     //t1 = time(NULL);
     clock_t c1,c2;
     c1 = clock();
     for(i = 0; i<input_arr_len; i++){
         answer = newton_method (input_arr[i] );
         printf("answer = %f\n",answer);
-        printf("i = %d\ninput_arr_len = %d\n",i,input_arr_len);
+        //printf("i = %d\ninput_arr_len = %d\n",i,input_arr_len);
         printf("===============================\n");
     }
     c2 = clock();
-    //t2 = clock();
     //t2 = time(NULL);
-    printf("全ての解を求めるまでにかかった時間：%.14f[ms]\n",(double)(c2-c1)/CLOCKS_PER_SEC);
+    printf("全ての解を求めるまでにかかった時間：%.14f[ms]\n",((double)(c2-c1)/CLOCKS_PER_SEC)*1000);
 
     return 0;
 }
