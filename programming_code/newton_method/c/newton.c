@@ -77,6 +77,7 @@ int main ( void ){
     for(i = 0; i<input_arr_len; i++){
         answer = newton_method (input_arr[i] );
         printf("answer = %f\n",answer);
+        printf("i = %d\ninput_arr_len = %d\n",i,input_arr_len);
         printf("===============================\n");
     }
     c2 = clock();
