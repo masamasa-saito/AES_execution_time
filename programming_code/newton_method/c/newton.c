@@ -33,7 +33,7 @@ double newton_method ( double initial_value ){
     double x = initial_value;
     int i = 0;
     while((fabs(f(x))) > Epsilon){
-        fprintf(stderr, "i = %2d   x = %3.16f\n",i,x);
+        //fprintf(stderr, "i = %2d   x = %3.16f\n",i,x);
         x = x - f(x)/dfdx(x);
         i++;
     }
@@ -42,7 +42,7 @@ double newton_method ( double initial_value ){
 
 
 #define N 256
-#define MAX 600
+#define MAX 20000
 int main(void){
     /// 外部の入力ファイルから1行ずつ読み込んで、入力用の配列に入れる ///
     FILE *fp;
@@ -73,9 +73,9 @@ int main(void){
     c1 = clock();
     for(i = 0; i<input_arr_len; i++){
         answer = newton_method (input_arr[i] );
-        printf("answer = %f\n",answer);
+        //printf("answer = %f\n",answer);
         //printf("i = %d\ninput_arr_len = %d\n",i,input_arr_len);
-        printf("===============================\n");
+        //printf("===============================\n");
     }
     c2 = clock();
     //t2 = time(NULL);

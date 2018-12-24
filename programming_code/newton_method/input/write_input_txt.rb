@@ -12,7 +12,7 @@
 
 ### 外部の入力ファイルから1行ずつ読み込んで、入力用の配列に入れる ###
 File.open("./input.txt","w+") do |f|
-    for i in 1..500 do
+    for i in 1..20000 do
         f.puts((rand(20000)-10000).to_s)
     end
 end

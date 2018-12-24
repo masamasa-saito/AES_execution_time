@@ -29,13 +29,13 @@ def newton_method ( initial_value )
   x = initial_value
   i = 0
   while (f( x )).abs > Epsilon do
-    p sprintf("i = %2d   x = %20.16f",i,x)
     x = x - f(x) / dfdx(x)
     i += 1
   end
   return x
 end
 
+    #p sprintf("i = %2d   x = %20.16f",i,x)
 
 
 
@@ -50,10 +50,11 @@ end
 execution_time = Benchmark.realtime do
   input_arr.each do |initial_value| 
     answer = newton_method( initial_value )
-    puts "answer = #{answer}"
-    puts "==============================="
   end
 end
+
+    #puts "answer = #{answer}"
+    #puts "==============================="
 
 
 puts "全ての解を求めるまでにかかった時間：#{execution_time*1000}[ms]"
