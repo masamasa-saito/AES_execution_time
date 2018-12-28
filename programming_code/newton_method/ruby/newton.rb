@@ -35,7 +35,6 @@ def newton_method ( initial_value )
   return x
 end
 
-    #p sprintf("i = %2d   x = %20.16f",i,x)
 
 
 
@@ -52,9 +51,6 @@ execution_time = Benchmark.realtime do
     answer = newton_method( initial_value )
   end
 end
-
-    #puts "answer = #{answer}"
-    #puts "==============================="
 
 
 puts "全ての解を求めるまでにかかった時間：#{execution_time*1000}[ms]"

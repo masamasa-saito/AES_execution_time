@@ -13,7 +13,6 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
-//#include <sys/time.h>
 
 /*=== f関数：引数xに対しf(x)を返す ===*/
 double f ( double x ){
@@ -68,7 +67,6 @@ int main(void){
     int input_arr_len = i;
     double answer;
     /// ここから時間測定開始 ///
-    //t1 = time(NULL);
     clock_t c1,c2;
     c1 = clock();
     for(i = 0; i<input_arr_len; i++){
@@ -78,7 +76,13 @@ int main(void){
         //printf("===============================\n");
     }
     c2 = clock();
-    //t2 = time(NULL);
+    /*
+    printf("cpuの1クロックするまでの時間 = %.14f[ms]\n",(1/(double)CLOCKS_PER_SEC)*1000);
+    printf("c1 = %d\n",(int)c1);
+    printf("測り始めた時間：%.14f[ms]\n",((double)c1/CLOCKS_PER_SEC)*1000);
+    printf("c2 = %d\n",(int)c2);
+    printf("測り終わった時間：%14f[ms]\n",((double)c2/CLOCKS_PER_SEC)*1000);
+    */
     printf("全ての解を求めるまでにかかった時間：%.14f[ms]\n",((double)(c2-c1)/CLOCKS_PER_SEC)*1000);
 
     return 0;
