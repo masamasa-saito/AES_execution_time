@@ -1,4 +1,5 @@
 require 'benchmark'
+
 i = 0
 execution_time = Benchmark.realtime do
   for i in 0..9999 do
@@ -7,4 +8,4 @@ execution_time = Benchmark.realtime do
 end
 
 #puts "全ての解を求めるまでにかかった時間：#{execution_time*1000}[ms]"
-puts "Time taken to obtain all solutions (Ruby)：#{execution_time*1000}[ms]"
+puts "Time taken to output Hello world! 10000 times (Ruby)：#{execution_time*1000}[ms]"
