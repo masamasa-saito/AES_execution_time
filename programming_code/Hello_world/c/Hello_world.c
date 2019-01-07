@@ -2,7 +2,7 @@
 //
 // Hello_world.c
 //
-// Hello_worldを100回繰り返す
+// output "Hello_world!" 10000times
 //
 ////////////////////////////////////////////////////////////
 
@@ -11,7 +11,6 @@
 
 int main ( void ){
     int i = 0;
-    /// ここから時間測定開始 ///
     /// Start time measurement from here ///
     clock_t c1,c2;
     c1 = clock();
@@ -19,7 +18,6 @@ int main ( void ){
         printf("Hello world!\n");
     }
     c2 = clock();
-    //printf("全ての解を求めるまでにかかった時間：%.14f[ms]\n",((double)(c2-c1)/CLOCKS_PER_SEC)*1000);
     printf("Time taken to output Hello world! 10000 times (C-language)：%.14f[ms]\n",((double)(c2-c1)/CLOCKS_PER_SEC)*1000);
     return 0;
 }

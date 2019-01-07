@@ -7,5 +7,4 @@ execution_time = Benchmark.realtime do
   end
 end
 
-#puts "全ての解を求めるまでにかかった時間：#{execution_time*1000}[ms]"
 puts "Time taken to output Hello world! 10000 times (Ruby)：#{execution_time*1000}[ms]"
