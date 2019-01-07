@@ -2,14 +2,14 @@
 #
 # write_input_txt.rb
 #
-# 「./input.txt」のファイルに、-10000～9999までの
-#  ランダムな数値を20000個、1行ずつ書き込む
+# Write 20000 random numbers from -10000 to 9999 
+# on a line of "./input.txt" line by line.
 #
 ####################################################
 
 
 
-### 外部の入力用のファイルに-10000～9999までのランダムな値を一行ずつ書き込む ###
+### Write a random value from -10000 to 9999 on a line for external input  ###
 File.open("./input.txt","w+") do |f|
     for i in 1..20000 do
         f.puts((rand(20000)-10000).to_s)
